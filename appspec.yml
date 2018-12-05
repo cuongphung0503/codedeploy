@@ -4,13 +4,13 @@ files:
    - source: /
      destination: /var/www/html
 permissions:
-- object: /var/www/html
-    pattern: "**"
-    owner: apache
-    group: apache
-    mode: 755
-    type:
-    - file
+   - object: /var/www/html
+     pattern: "**"
+     owner: apache
+     group: apache
+     mode: 777
+     type:
+       - file
 hooks:
    BeforeInstall:
     - location: scripts/installapache.sh
